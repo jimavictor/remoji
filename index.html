@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta set="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>REMOJI: Memory Game</title>
+  </head>
+  <body>
+    <div class="theme-switch">
+      <img class="night-mode" src="./images/night-mode.png" alt="night-mode" />
+      <img class="brightness" src="./images/brightness.png" alt="brightness" />
+    </div>
+    <div class="menu-container">
+      <div class="menu">
+        <span id="prompt">Ready?</span>
+        <button id="start">
+          <img
+            class="play-icon"
+            src="./images/play-button-arrowhead.png"
+            alt="play-button"
+          />
+          Play
+        </button>
+        <a href="/instructions.html" id="instructions">
+          <img
+            class="instruction-icon"
+            src="./images/info.png"
+            alt="info-icon"
+          />
+          Instructions</a
+        >
+      </div>
+    </div>
+    <header id="header">
+      <h1>REMOJI</h1>
+      <h3>Memory Game</h3>
+    </header>
+    <main id="main">
+      <div class="time-move-container">
+        <span id="time">
+          Time:
+          <span id="minutes">00</span><span id="colon">:</span
+          ><span id="seconds">00</span>
+        </span>
+        <span id="moves">
+          Moves:
+          <span id="move-count">0</span>
+        </span>
+      </div>
+      <div class="grid">
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+        <div class="grid-item">
+          <span class="emoji"></span>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </main>
+    <div class="scorecard-wrapper">
+      <div class="score-card">
+        <h2>Congratulations!!<br />&#127881;&#127881;</h2>
+        <div class="wrapper">
+          <span id="moves-label">Moves:</span>
+          <p class="total-moves">45</p>
+          <div class="time">
+            <span id="time-label">Time: </span><br />
+            <span class="total-time">
+              <span id="total-minutes">00</span><span>:</span
+              ><span id="total-seconds">00</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

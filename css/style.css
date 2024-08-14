@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+main {
+  opacity: 0;
+  width: 100%;
+  max-width: 400px;
+  min-width: 310px;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  transition: opacity 0.5s;
+}
+
+.time-move-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.emoji {
+  font-size: 30px;
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid transparent;
+  box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(70, 90, 245);
+  border-radius: 3px;
+  opacity: 1;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.clicked {
+  opacity: 0;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+}
+
+h3 {
+  color: rgb(51, 48, 48);
+  font-size: 25px;
+}
+
+#time,
+#moves {
+  font-size: 18px;
+}
+
+.theme-switch {
+  width: 70vw;
+  text-align: right;
+  margin: 30px 0;
+}
+
+@media (min-width: 450px) {
+  .emoji {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+}
+
+.menu-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 200px;
+  z-index: 1;
+  color: white;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.menu {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+#start,
+#instructions {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 20px;
+  padding: 12px 20px;
+  box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#instructions {
+  color: black;
+  font-weight: bolder;
+  text-decoration: none;
+  background-color: #e9e9ed;
+  font-size: 24px;
+}
+
+#instructions:hover {
+  background-color: #d0d0d7;
+}
+
+#prompt {
+  color: black;
+  font-size: 40px;
+}
+
+img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.brightness {
+  display: none;
+  color: white;
+  filter: invert(100%) grayscale(1);
+}
+
+.night-mode {
+  display: inline;
+}
+
+.score-card {
+  display: none;
+  width: 80%;
+  max-width: 450px;
+  text-align: center;
+  position: fixed;
+  top: 220px;
+  align-items: center;
+  box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  opacity: 0;
+  animation: scorecard 0.5s linear;
+}
+
+@keyframes scorecard {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  width: 100%;
+  padding: 5px 0;
+  background-color: #1e2122;
+  color: white;
+  font-size: 30px;
+}
+
+.total-moves,
+.total-time {
+  font-weight: bolder;
+  font-size: 39px;
+  padding-bottom: 10px;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+#time-label,
+#moves-label {
+  font-size: x-large;
+}
+
+.darkmode > .time-move-container > #time,
+.darkmode > #prompt,
+.darkmode > .time-move-container > #moves,
+.darkmode > h1,
+.darkmode > h3 {
+  color: white;
+}
+
+.darkmode > h2 {
+  background-color: white;
+  color: black;
+}
+
+.darkmode > .wrapper {
+  color: white;
+  background-color: #202c37;
+}
+
+.darkmode > .night-mode {
+  display: none;
+}
+
+.darkmode > .brightness {
+  display: inline;
+}
+
+.instruction-icon,
+.play-icon {
+  margin-right: 10px;
+}
+
+.scorecard-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
