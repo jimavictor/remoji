@@ -7,7 +7,7 @@ Remoji is a simple and fun card-matching game where the objective is to match pa
 ## Demo:
 ![Remoji demo](game-demo.gif)
 
-Play Online: 
+Play Online: https://remoji123.netlify.app/
 
 ## How to Play
 
